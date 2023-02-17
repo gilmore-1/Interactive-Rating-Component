@@ -1,0 +1,62 @@
+.card{
+    width: 100%;
+    max-width: 412px;
+    border-radius: 30px;
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+    padding: 32px;
+    
+}
+h1{
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: white;
+
+}
+.circle{
+    width: 48px;
+    height: 48px;
+    background: #262E38;
+    border-radius: 50%;
+
+}
+
+.path{
+    background-image: url('Path.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+p{
+font-family: 'Overpass';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+
+
+color: #969FAD;
+
+}
+.flex-container {
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+ .flex-container > div {
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #262E38;
+    border-radius: 50%;
+    padding-top: 10px;
+
+
+}
+button{
+
+    height: 45px;
+    width: 341px;
+    border-radius: 22.5px;
+}
