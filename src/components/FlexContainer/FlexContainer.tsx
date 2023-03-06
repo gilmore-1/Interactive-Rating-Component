@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
+import { MyContext, MyContextProps } from '../Card/Card';
 
-function FlexContainer() {
-  const [number,setNumber] = useState<Number>(0)
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+const FlexContainer: React.FC = () => {
+  const { count, setCount } = useContext<MyContextProps>(MyContext);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>,number: number) => {
       event.preventDefault();
         const current : Number | undefined = event.currentTarget.parentElement?.querySelectorAll('button').length;
         if(current ){
@@ -13,20 +15,20 @@ function FlexContainer() {
               element.style.backgroundColor = "#262E38";
               element.style.color = "#7C8798";
             }
+            setCount(number)
           }
         }
         event.currentTarget.style.color="#FFFFFF";
         event.currentTarget.style.backgroundColor = "#7C8798";
-      console.log(number)
   }
   return (
     <div className='FlexContainer'>
         <Container >
-              <Circle onClick={(e) => handleClick(e)}>1</Circle>
-              <Circle onClick={(e) => handleClick(e)}>2</Circle>
-              <Circle onClick={(e) => handleClick(e)}>3</Circle>
-              <Circle onClick={(e) => handleClick(e)}>4</Circle>
-              <Circle onClick={(e) => handleClick(e)}>5</Circle>
+              <Circle onClick={(e) => handleClick(e,1)}>1</Circle>
+              <Circle onClick={(e) => handleClick(e,2)}>2</Circle>
+              <Circle onClick={(e) => handleClick(e,3)}>3</Circle>
+              <Circle onClick={(e) => handleClick(e,4)}>4</Circle>
+              <Circle onClick={(e) => handleClick(e,5)}>5</Circle>
         </Container>
     </div>
   )
